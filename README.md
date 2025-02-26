@@ -8,7 +8,9 @@
 3. In src > main > resources there is a file "application.properties" in which to put the following setup :
 
       spring.application.name=name-of-application -> name of the folder in which is src;
+   
       spring.datasource.url=jdbc:postgresql://localhost:5432/name-of-database?currentSchema=name-of-schema
+   
       spring.datasource.username=database-username
    
       spring.datasource.password=database-password
