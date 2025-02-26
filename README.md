@@ -8,8 +8,7 @@
 3. In src > main > resources there is a file "application.properties" in which to put the following setup :
 
       spring.application.name=name-of-application -> name of the folder in which is src;
-      spring.datasource.url=jdbc:postgresql://localhost:5432/name-of-database
-          ?currentSchema=name-of-schema
+      spring.datasource.url=jdbc:postgresql://localhost:5432/name-of-database?currentSchema=name-of-schema
       spring.datasource.username=database-username
       spring.datasource.password=database-password
       spring.datasource.driver-class-name=org.postgresql.Driver
@@ -21,4 +20,4 @@
       spring.thymeleaf.prefix=classpath:/templates/
       spring.thymeleaf.suffix=.html
 
-5. Make sure that in the main folder (manager here), in pom.xml, you have all the dependencies.
+4. Make sure that in the main folder (manager here), in pom.xml, you have all the dependencies.
