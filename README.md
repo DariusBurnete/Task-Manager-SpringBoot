@@ -10,7 +10,9 @@
       spring.application.name=name-of-application -> name of the folder in which is src;
       spring.datasource.url=jdbc:postgresql://localhost:5432/name-of-database?currentSchema=name-of-schema
       spring.datasource.username=database-username
+   
       spring.datasource.password=database-password
+   
       spring.datasource.driver-class-name=org.postgresql.Driver
 
       spring.jpa.properties.hibernate.default_schema=name-of-schema
@@ -20,4 +22,4 @@
       spring.thymeleaf.prefix=classpath:/templates/
       spring.thymeleaf.suffix=.html
 
-4. Make sure that in the main folder (manager here), in pom.xml, you have all the dependencies.
+5. Make sure that in the main folder (manager here), in pom.xml, you have all the dependencies.
