@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eng">
+<head>
+    <title>Tasks</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Estimated Hours</th>
+        <th>Completed Hours</th>
+        <th>Remaining Effort</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.description}"></td>
+        <td th:text="${task.estimatedHours}"></td>
+        <td th:text="${task.completedHours}"></td>
+        <td th:text="${task.remainingEffort}"></td>
+        <td>
+            <a th:href="@{/tasks/{id}(id=${task.id})}">View</a>
+            <form th:action="@{/tasks/{id}/delete(id=${task.id})}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

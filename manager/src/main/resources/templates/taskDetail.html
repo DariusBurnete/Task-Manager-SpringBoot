@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eng">
+<head>
+  <title>Task Details</title>
+</head>
+<body>
+<h1>Task Details</h1>
+<div th:if="${task != null}">
+  <p>ID: <span th:text="${task.id}"></span></p>
+  <p>Description: <span th:text="${task.description}"></span></p>
+  <p>Estimated Hours: <span th:text="${task.estimatedHours}"></span></p>
+  <p>Completed Hours: <span th:text="${task.completedHours}"></span></p>
+  <p>Remaining Effort: <span th:text="${task.remainingEffort}"></span></p>
+  <form th:action="@{/tasks/{id}/remainingEffort(id=${task.id})}" method="post">
+    <label for="remainingEffort">Update Remaining Effort:</label>
+    <input type="number" id="remainingEffort" name="remainingEffort">
+    <button type="submit">Update</button>
+  </form>
+</div>
+<div th:if="${task == null}">
+  <p>Task not found.</p>
+</div>
+<a href="/tasks">Back to Tasks</a>
+</body>
+</html>
