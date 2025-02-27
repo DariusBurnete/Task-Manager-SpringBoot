@@ -4,23 +4,24 @@ import com.task.manager.dto.LoginRequest;
 import com.task.manager.model.Owner;
 import com.task.manager.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/owners")
+@Controller
+@RequestMapping("/login")
 public class OwnerController {
     @Autowired
     private OwnerService ownerService;
 
-    @GetMapping("/login")
+    @GetMapping
     public String showLoginPage() {
         return "login"; // Return the login view
     }
 
-    @PostMapping("/login")
+    @PostMapping("/login-form")
     public String login(@RequestParam String email, @RequestParam String password, Model model) {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail(email);
