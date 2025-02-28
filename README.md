@@ -19,3 +19,7 @@
       spring.thymeleaf.suffix=.html  
 
 5. Make sure that in the main folder (manager here), in pom.xml, you have all the dependencies.
+
+6. Run KeyGen in src > main > java > com.task.manager > jwt once to create your secret key.
+
+7. Directly in the main folder (manager here), create a .env file that contains JWT_SECRET_KEY=your_secret_key
