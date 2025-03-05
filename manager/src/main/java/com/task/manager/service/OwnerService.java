@@ -4,20 +4,32 @@ import com.task.manager.dto.LoginRequest;
 import com.task.manager.model.Owner;
 import com.task.manager.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
 public class OwnerService {
-    @Autowired
-    private OwnerRepository ownerRepository;
 
-    public Optional<Owner> login(LoginRequest loginRequest) {
-        Optional<Owner> owner = ownerRepository.findByEmail(loginRequest.getEmail());
-        if (owner.isPresent() && owner.get().getPassword().equals(loginRequest.getPassword())) {
-            return owner;
-        }
-        return Optional.empty();
+    private final OwnerRepository ownerRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    public OwnerService(OwnerRepository ownerRepository, PasswordEncoder passwordEncoder) {
+        this.ownerRepository = ownerRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    public boolean ownerExists(String email) {
+        return ownerRepository.findByEmail(email).isPresent();
+    }
+
+    public void registerOwner(Owner owner) {
+        owner.setPassword(passwordEncoder.encode(owner.getPassword()));
+        ownerRepository.save(owner);
+    }
+
+    public Optional<Owner> findByEmail(String email) {
+        return ownerRepository.findByEmail(email);
     }
 }
