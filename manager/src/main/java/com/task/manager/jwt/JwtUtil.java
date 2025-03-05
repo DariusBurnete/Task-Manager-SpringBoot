@@ -2,6 +2,7 @@ package com.task.manager.jwt;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -17,7 +18,8 @@ public class JwtUtil {
     public JwtUtil() {
         Dotenv dotenv = Dotenv.load();
         String secretKey = dotenv.get("JWT_SECRET_KEY");
-        this.key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
+        assert secretKey != null;
+        this.key = Keys.hmacShaKeyFor(secretKey.getBytes());
     }
 
     public String generateToken(String email) {
@@ -37,7 +39,12 @@ public class JwtUtil {
                 .getPayload();
     }
 
-    public boolean isTokenExpired(String token) {
-        return extractClaims(token).getExpiration().before(new Date());
+    public boolean validateToken(String token) {
+        try{
+            Jwts.parser().verifyWith(key).build().parseSignedClaims(token);
+            return true;
+        } catch (JwtException e) {
+            return false;
+        }
     }
 }
