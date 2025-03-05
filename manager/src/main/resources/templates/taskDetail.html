@@ -4,6 +4,9 @@
   <title>Task Details</title>
 </head>
 <body>
+<form th:action="@{/api/logout}" method="post">
+  <button type="submit">Logout</button>
+</form>
 <h1>Task Details</h1>
 <div th:if="${task != null}">
   <p>ID: <span th:text="${task.id}"></span></p>
