@@ -22,6 +22,8 @@
 
 5. Run KeyGen in src > main > java > com.task.manager > jwt once to create your secret key.
 
-6. Directly in the main folder (manager in this case), create a .env file that contains JWT_SECRET_KEY=your_secret_key
+6. Make sure the passwords in the database are encoded (using BCryptPasswordEncoder)
 
-7. .gitignore must contain main_folder_name(manager in this case)/.env
+7. Directly in the main folder (manager in this case), create a .env file that contains JWT_SECRET_KEY=your_secret_key
+
+8. .gitignore must contain main_folder_name(manager in this case)/.env
