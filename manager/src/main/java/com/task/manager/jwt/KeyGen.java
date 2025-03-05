@@ -13,8 +13,5 @@ public class KeyGen{
         *//*SecretKey key = Keys.secretKeyFor(SignatureAlgorithm.HS512);
         String base64Key = Base64.getEncoder().encodeToString(key.getEncoded());
         System.out.println(base64Key);*//*
-
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
-        System.out.println(encoder.encode("admin"));
     }
 }*/

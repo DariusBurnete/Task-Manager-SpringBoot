@@ -32,4 +32,12 @@ public class OwnerService {
     public Optional<Owner> findByEmail(String email) {
         return ownerRepository.findByEmail(email);
     }
+
+    public boolean verifyPassword(Owner owner, String rawPassword) {
+        return passwordEncoder.matches(rawPassword, owner.getPassword());
+    }
+
+    public void deleteOwner(Owner owner) {
+        ownerRepository.delete(owner);
+    }
 }
