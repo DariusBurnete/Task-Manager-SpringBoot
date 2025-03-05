@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import java.util.Map;
 import java.util.Optional;
 
@@ -51,7 +53,8 @@ public class OwnerController {
             @RequestParam String email,
             @RequestParam String password,
             HttpServletResponse response,
-            Model model
+            Model model,
+            RedirectAttributes redirectAttributes
     ){
         try{
             System.out.println("Attempting authentication for: " + email);
@@ -77,11 +80,11 @@ public class OwnerController {
 
             return "redirect:/tasks";
         } catch(UsernameNotFoundException | BadCredentialsException e) {
-            model.addAttribute("error", "Invalid username or password");
+            redirectAttributes.addFlashAttribute("error", "Invalid username or password");
             System.out.println("Authentication failed: " + e.getMessage());
             return "redirect:/login";
         } catch(Exception e){
-            model.addAttribute("error", "An unexpected error occurred");
+            redirectAttributes.addFlashAttribute("error", "An unexpected error occurred");
             System.out.println("Authentication failed: " + e.getMessage());
             return "redirect:/login";
         }

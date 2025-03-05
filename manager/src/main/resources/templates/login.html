@@ -13,9 +13,9 @@
     <input type="password" id="password" name="password" required>
     <br>
     <button type="submit">Login</button>
-    <p class="error" th:if="${error}" th:text="${error}"></p>
 </form>
 <button onclick="window.location.href='/register'">Register</button>
+<p class="error" th:if="${error}" th:text="${error}"></p>
 <h1>Delete Account</h1>
 <form th:action="@{/deleteOwner}" method="post">
     <label for="deleteEmail">Email:</label>

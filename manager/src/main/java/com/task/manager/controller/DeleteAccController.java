@@ -23,7 +23,6 @@ public class DeleteAccController {
             // Verify password (assuming you have a method to check the password)
             if (ownerService.verifyPassword(owner, deletePassword)) {
                 ownerService.deleteOwner(owner);
-                model.addAttribute("deleteError", "Account Deleted.");
                 return "redirect:/login"; // Redirect to a success page
             } else {
                 model.addAttribute("deleteError", "Invalid password.");
