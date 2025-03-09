@@ -1,9 +1,9 @@
 # Task Manager SpringBoot
 ## With PostgreSQL
  
-1. Create the SpringBoot project using [Spring Initializr](https://start.spring.io/)
+1. Create the SpringBoot project using [Spring Initializr](https://start.spring.io/)    |
 
-2. Copy the files you don't have from src > main to your project's src > main
+2. Copy the files you don't have from src > main to your project's src > main           | or download ZIP
 
 3. In src > main > resources there is a file "application.properties" in which to put the following setup :
 
