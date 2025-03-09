@@ -1,11 +1,11 @@
 # Task Manager SpringBoot
 ## With PostgreSQL
  
-1. Create the SpringBoot project using [Spring Initializr](https://start.spring.io/)    |
+1. Create the SpringBoot project using [Spring Initializr](https://start.spring.io/)    
 
-2. Copy the files you don't have from src > main to your project's src > main           | or download ZIP
+2. Copy the files you don't have from src > main to your project's src > main (or download ZIP and skip 1. and 2.)
 
-3. In src > main > resources there is a file "application.properties" in which to put the following setup :
+5. In src > main > resources there is a file "application.properties" in which to put the following setup :
 
       spring.application.name=name-of-application -> name of the folder in which is src;  
       spring.datasource.url=jdbc:postgresql://localhost:5432/name-of-database?currentSchema=name-of-schema  
@@ -18,12 +18,12 @@
       spring.thymeleaf.prefix=classpath:/templates/  
       spring.thymeleaf.suffix=.html  
 
-4. Make sure that in the main folder (manager in this case), in pom.xml, you have all the dependencies.
+6. Make sure that in the main folder (manager in this case), in pom.xml, you have all the dependencies.
 
-5. Run KeyGen in src > main > java > com.task.manager > jwt once to create your secret key.
+7. Run KeyGen in src > main > java > com.task.manager > jwt once to create your secret key.
 
-6. Make sure the passwords in the database are encoded (using BCryptPasswordEncoder)
+8. Make sure the passwords in the database are encoded (using BCryptPasswordEncoder)
 
-7. Directly in the main folder (manager in this case), create a .env file that contains JWT_SECRET_KEY=your_secret_key
+9. Directly in the main folder (manager in this case), create a .env file that contains JWT_SECRET_KEY=your_secret_key
 
-8. .gitignore must contain main_folder_name(manager in this case)/.env
+10. .gitignore must contain main_folder_name(manager in this case)/.env
