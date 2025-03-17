@@ -30,6 +30,7 @@ public class TaskService {
         if (taskOpt.isPresent()) {
             Task task = taskOpt.get();
             task.setRemainingEffort(remainingEffort);
+            task.setCompletedHours(task.getEstimatedHours() - remainingEffort);
             return taskRepository.save(task);
         }
         return null;
@@ -39,27 +40,8 @@ public class TaskService {
         taskRepository.deleteById(id);
     }
 
-    public String computeEstimationAccuracy(Long id) {
-        Optional<Task> taskOpt = taskRepository.findById(id);
-        if (taskOpt.isPresent()) {
-            Task task = taskOpt.get();
-            Integer estimatedHours = task.getEstimatedHours();
-            Integer completedHours = task.getCompletedHours();
-
-            if (estimatedHours == null || estimatedHours == 0) {
-                return "NOT_ESTIMATED";
-            } else if (0.9 * estimatedHours <= completedHours && completedHours <= 1.1 * estimatedHours) {
-                return "ACCURATELY_ESTIMATED";
-            } else if (completedHours < 0.9 * estimatedHours) {
-                return "OVER_ESTIMATED";
-            } else {
-                return "UNDER_ESTIMATED";
-            }
-        }
-        return "TASK_NOT_FOUND";
-    }
-
     public void saveTask(Task task) {
+        task.setCompletedHours(task.getEstimatedHours() - task.getRemainingEffort());
         taskRepository.save(task);
     }
 }

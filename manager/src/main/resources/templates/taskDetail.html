@@ -27,7 +27,7 @@
       <p th:text="${comment.content}"></p>
       <form th:action="@{/tasks/comments/{commentId}/edit(commentId=${comment.id})}" method="post">
         <label>
-          <input type="text" name="content" th:value="${comment.content}">
+          <textarea name="content" rows="1" cols="50" style="resize: both;"></textarea>
         </label>
         <button type="submit">Edit</button>
       </form>
@@ -38,7 +38,7 @@
   </div>
   <form th:action="@{/tasks/{taskId}/comments(taskId=${task.id})}" method="post">
     <label for="content">Add Comment:</label>
-    <input type="text" id="content" name="content">
+    <textarea id="content" name="content" rows="1" cols="50" style="resize: both;"></textarea>
     <button type="submit">Add</button>
   </form>
 
