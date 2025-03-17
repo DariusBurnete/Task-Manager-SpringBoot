@@ -58,4 +58,8 @@ public class TaskService {
         }
         return "TASK_NOT_FOUND";
     }
+
+    public void saveTask(Task task) {
+        taskRepository.save(task);
+    }
 }

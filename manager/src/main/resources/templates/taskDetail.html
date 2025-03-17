@@ -20,6 +20,28 @@
     <input type="number" id="remainingEffort" name="remainingEffort">
     <button type="submit">Update</button>
   </form>
+
+  <h2>Comments</h2>
+  <div th:if="${task.comments != null}">
+    <div th:each="comment : ${task.comments}">
+      <p th:text="${comment.content}"></p>
+      <form th:action="@{/tasks/comments/{commentId}/edit(commentId=${comment.id})}" method="post">
+        <label>
+          <input type="text" name="content" th:value="${comment.content}">
+        </label>
+        <button type="submit">Edit</button>
+      </form>
+      <form th:action="@{/tasks/comments/{commentId}/delete(commentId=${comment.id})}" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </div>
+  <form th:action="@{/tasks/{taskId}/comments(taskId=${task.id})}" method="post">
+    <label for="content">Add Comment:</label>
+    <input type="text" id="content" name="content">
+    <button type="submit">Add</button>
+  </form>
+
 </div>
 <div th:if="${task == null}">
   <p>Task not found.</p>

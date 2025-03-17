@@ -2,6 +2,9 @@ package com.task.manager.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Task {
     @Id
@@ -11,6 +14,9 @@ public class Task {
     private Integer estimatedHours;
     private Integer completedHours;
     private Integer remainingEffort;
+
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -55,5 +61,13 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

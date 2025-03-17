@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="redirection to login from home">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/createTask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/DeleteAccController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/DeleteAccController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,28 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ManagerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/EBURNED41/OneDrive - NTT DATA EMEAL/Escritorio/Task-Manager-SpringBoot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ManagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/EBURNED41/OneDrive - NTT DATA EMEAL/Escritorio/Task-Manager-SpringBoot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\EBURNED41\OneDrive - NTT DATA EMEAL\Escritorio\Task-Manager-SpringBoot\manager\src\main\resources\templates\fragments" />
       <recent name="C:\Users\EBURNED41\OneDrive - NTT DATA EMEAL\Escritorio\Task-Manager-SpringBoot\manager\src\main\resources" />
     </key>
   </component>
@@ -103,11 +112,25 @@
       <updated>1740593431781</updated>
       <workItem from="1740593433208" duration="33000" />
       <workItem from="1742209765425" duration="381000" />
-      <workItem from="1742210163833" duration="1120000" />
+      <workItem from="1742210163833" duration="6794000" />
+      <workItem from="1742220604186" duration="3202000" />
     </task>
+    <task id="LOCAL-00001" summary="redirection to login from home">
+      <option name="closed" value="true" />
+      <created>1742211367215</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742211367215</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="redirection to login from home" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirection to login from home" />
   </component>
 </project>
