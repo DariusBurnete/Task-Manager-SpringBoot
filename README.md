@@ -26,4 +26,4 @@
 
 9. In main folder (manager in this case) > resources, create a .env file that contains JWT_SECRET_KEY=your_secret_key
 
-10. .gitignore must contain main_folder_name(manager in this case)/.env
+10. .gitignore must contain main_folder_name(manager in this case)/resources/.env
