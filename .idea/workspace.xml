@@ -4,30 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="" />
+    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DariusBurnete"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DariusBurnete&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DariusBurnete/Task-Manager-SpringBoot.git",
-    "accountId": "fb9b065b-eed0-4c28-8885-435167fe731a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DariusBurnete/Task-Manager-SpringBoot.git&quot;,
+    &quot;accountId&quot;: &quot;fb9b065b-eed0-4c28-8885-435167fe731a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2tac4AzajIWs8DQvSE9VwBg8wp1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,14 +53,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ManagerApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/EBURNED41/OneDrive - NTT DATA EMEAL/Escritorio/Task-Manager-SpringBoot/manager",
+    "last_opened_file_path": "C:/Users/EBURNED41/OneDrive - NTT DATA EMEAL/Escritorio/Task-Manager-SpringBoot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\EBURNED41\OneDrive - NTT DATA EMEAL\Escritorio\Task-Manager-SpringBoot\manager\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="manager" />
@@ -69,6 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1740593431781</updated>
       <workItem from="1740593433208" duration="33000" />
+      <workItem from="1742209765425" duration="381000" />
+      <workItem from="1742210163833" duration="1120000" />
     </task>
     <servers />
   </component>
