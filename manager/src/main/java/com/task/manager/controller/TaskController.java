@@ -1,10 +1,15 @@
 package com.task.manager.controller;
 
 import com.task.manager.model.Comment;
+import com.task.manager.model.Owner;
 import com.task.manager.model.Task;
+import com.task.manager.service.OwnerService;
 import com.task.manager.service.TaskService;
 import com.task.manager.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +28,33 @@ public class TaskController {
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private OwnerService ownerService;
+
+    private Long getCurrentOwnerId() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String email = userDetails.getUsername();
+            Optional<Owner> ownerOpt = ownerService.findByEmail(email);
+            if (ownerOpt.isPresent()) {
+                return ownerOpt.get().getId();
+            }
+        }
+        return null;
+    }
+
+
     @GetMapping
     public String getAllTasks(Model model) {
-        List<Task> tasks = taskService.getAllTasks();
-        model.addAttribute("tasks", tasks);
+        Long ownerId = getCurrentOwnerId();
+        if (ownerId != null) {
+            List<Task> tasks = taskService.getTasksByOwnerId(ownerId);
+            model.addAttribute("tasks", tasks);
+        } else {
+            model.addAttribute("tasks", new ArrayList<>());
+        }
+
         return "taskList";
     }
 
@@ -40,12 +68,17 @@ public class TaskController {
     @GetMapping("/new")
     public String showCreateTaskForm(Model model) {
         model.addAttribute("task", new Task());
+        model.addAttribute("ownerId", getCurrentOwnerId());
         return "createTask";
     }
 
     @PostMapping("/new")
-    public String createTask(@ModelAttribute Task task) {
-        taskService.saveTask(task);
+    public String createTask(@ModelAttribute Task task, @RequestParam Long ownerId) {
+        Optional<Owner> ownerOpt = ownerService.getOwnerById(ownerId);
+        if (ownerOpt.isPresent()) {
+            task.setOwner(ownerOpt.get());
+            taskService.saveTask(task);
+        }
         return "redirect:/tasks";
     }
 

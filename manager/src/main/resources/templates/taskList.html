@@ -37,6 +37,7 @@
     </tbody>
 </table>
 <form th:action="@{/tasks/new}" method="get">
+    <input type="hidden" name="ownerId" th:value="${owner.id}"/>
     <button type="submit">Create New Task</button>
 </form>
 </body>

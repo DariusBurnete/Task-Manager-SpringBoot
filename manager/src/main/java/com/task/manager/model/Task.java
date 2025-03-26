@@ -70,4 +70,12 @@ public class Task {
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
 }

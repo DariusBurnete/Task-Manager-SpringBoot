@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="added comments for each task">
+    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="small changes, tweaking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/OwnerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/createTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/createTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,9 @@
       <workItem from="1740593433208" duration="33000" />
       <workItem from="1742209765425" duration="381000" />
       <workItem from="1742210163833" duration="6794000" />
-      <workItem from="1742220604186" duration="5887000" />
+      <workItem from="1742220604186" duration="6126000" />
+      <workItem from="1742565246350" duration="1479000" />
+      <workItem from="1742993319362" duration="4990000" />
     </task>
     <task id="LOCAL-00001" summary="redirection to login from home">
       <option name="closed" value="true" />
@@ -123,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742226196893</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="small changes, tweaking">
+      <option name="closed" value="true" />
+      <created>1742228696888</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742228696888</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redirection to login from home" />
     <MESSAGE value="added comments for each task" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments for each task" />
+    <MESSAGE value="small changes, tweaking" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes, tweaking" />
   </component>
 </project>

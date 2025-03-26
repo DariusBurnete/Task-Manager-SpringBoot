@@ -40,4 +40,10 @@ public class OwnerService {
     public void deleteOwner(Owner owner) {
         ownerRepository.delete(owner);
     }
+
+    public Optional<Owner> getOwnerById(Long id) {
+        return ownerRepository.findById(id);
+    }
+
+
 }
