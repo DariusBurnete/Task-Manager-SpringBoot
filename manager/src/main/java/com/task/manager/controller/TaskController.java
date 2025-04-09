@@ -46,15 +46,24 @@ public class TaskController {
 
 
     @GetMapping
-    public String getAllTasks(Model model) {
-        Long ownerId = getCurrentOwnerId();
-        if (ownerId != null) {
-            List<Task> tasks = taskService.getTasksByOwnerId(ownerId);
-            model.addAttribute("tasks", tasks);
+    public String getAllTasks(@RequestParam(required = false) Long ownerId, Model model) {
+
+        Long currentOwnerId = getCurrentOwnerId();
+        List<Task> tasks;
+
+        if (ownerId == null) {
+            ownerId = currentOwnerId;
+            tasks = taskService.getTasksByOwnerId(ownerId);
+        } else if (ownerId == 0) {
+            tasks = taskService.getAllTasks();
         } else {
-            model.addAttribute("tasks", new ArrayList<>());
+            tasks = taskService.getTasksByOwnerId(ownerId);
         }
 
+        List<Owner> owners = ownerService.getAllOwners();
+        model.addAttribute("owners", owners);
+        model.addAttribute("tasks", tasks);
+        model.addAttribute("selectedOwnerId", ownerId);
         return "taskList";
     }
 

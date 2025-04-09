@@ -3,6 +3,7 @@ package com.task.manager.service;
 import com.task.manager.model.Task;
 import com.task.manager.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,11 +15,11 @@ public class TaskService {
     private TaskRepository taskRepository;
 
     public List<Task> getAllTasks() {
-        return taskRepository.findAll();
+        return taskRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
     public List<Task> getTasksByOwnerId(Long ownerId) {
-        return taskRepository.findByOwnerId(ownerId);
+        return taskRepository.findByOwnerId(ownerId, Sort.by(Sort.Direction.ASC, "id"));
     }
 
     public Optional<Task> getTaskById(Long id) {

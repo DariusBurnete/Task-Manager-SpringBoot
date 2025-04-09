@@ -9,6 +9,15 @@
     <button type="submit">Logout</button>
 </form>
 <h1>Tasks</h1>
+
+<form th:action="@{/tasks}" method="get">
+<label for="ownerSelect">Filter by Owner:</label>
+<select id="ownerSelect" name="ownerId">
+     <option value="0" th:selected="${selectedOwnerId == 0}">All</option><option th:each="owner : ${owners}" th:value="${owner.id}" th:text="${owner.email}" th:selected="${owner.id == selectedOwnerId}"></option>
+</select>
+<button type="submit">Filter</button>
+</form>
+
 <table>
     <thead>
     <tr>

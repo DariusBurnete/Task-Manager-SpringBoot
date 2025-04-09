@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="small changes, tweaking">
+    <list default="true" id="3216537e-e6cb-4dba-bb5b-212f225b2140" name="Changes" comment="each owner can see only their own tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/repository/TaskRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/OwnerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/createTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/createTask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/task/manager/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/templates/taskList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +109,8 @@
       <workItem from="1742210163833" duration="6794000" />
       <workItem from="1742220604186" duration="6126000" />
       <workItem from="1742565246350" duration="1479000" />
-      <workItem from="1742993319362" duration="4990000" />
+      <workItem from="1742993319362" duration="5046000" />
+      <workItem from="1744213063792" duration="3749000" />
     </task>
     <task id="LOCAL-00001" summary="redirection to login from home">
       <option name="closed" value="true" />
@@ -135,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742228696888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="each owner can see only their own tasks">
+      <option name="closed" value="true" />
+      <created>1742998696932</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742998696932</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +154,7 @@
     <MESSAGE value="redirection to login from home" />
     <MESSAGE value="added comments for each task" />
     <MESSAGE value="small changes, tweaking" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes, tweaking" />
+    <MESSAGE value="each owner can see only their own tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="each owner can see only their own tasks" />
   </component>
 </project>

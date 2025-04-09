@@ -4,9 +4,11 @@ import com.task.manager.dto.LoginRequest;
 import com.task.manager.model.Owner;
 import com.task.manager.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,6 +45,10 @@ public class OwnerService {
 
     public Optional<Owner> getOwnerById(Long id) {
         return ownerRepository.findById(id);
+    }
+
+    public List<Owner> getAllOwners() {
+        return ownerRepository.findAll(Sort.by(Sort.Direction.ASC, "email"));
     }
 
 
