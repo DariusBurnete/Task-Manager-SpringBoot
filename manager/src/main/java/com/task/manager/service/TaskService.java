@@ -41,6 +41,13 @@ public class TaskService {
         taskRepository.deleteById(id);
     }
 
+
+    public void deleteTasksByOwnerId(Long ownerId) {
+        List<Task> tasks = taskRepository.findByOwnerId(ownerId, Sort.by(Sort.Direction.ASC, "id"));
+        taskRepository.deleteAll(tasks);
+    }
+
+
     public void saveTask(Task task) {
         task.setCompletedHours(task.getEstimatedHours() - task.getRemainingEffort());
         taskRepository.save(task);
